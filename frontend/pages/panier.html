@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Orinoco, site de vente en ligne par thématiques, vous présente Oribear et ses ours en peluche faits à la main">
+    <!-- Link Favicone -->
+    <link rel="icon" type="image/png" href="../image/logo/favicone.png" />
+    <!-- Link librairie FontAwesome -->
+    <script src="https://kit.fontawesome.com/9978fbdf61.js" crossorigin="anonymous"></script>
+    <!-- Link librairie GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Poppins:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- Link feuille de style CSS -->
+    <link rel="stylesheet" href="../../frontend/css/main.css">
+    <title>Produit - Orinoco</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../image/logo/logo_mini.png" alt="logo orinoco"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i><span class="cacher">Home</span></a></li>
+                <li><a href="../index.html#products"><i class="fas fa-camera"></i><span class="cacher">Nos produits</span></a></li>
+                <li><a href="../pages/panier.html"><i class="fas fa-shopping-basket"><span
+                                class="count">0</span></i><span class="cacher">Panier</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero__image"></div>
+            <div class="hero__title">
+                <!-- <h1>Votre Panier</h1> -->
+            </div>
+        </div>
+    </main>
+    <div class="empty__cart" id="empty">
+        <h2>Votre panier est vide</h2>
+    </div>
+    <div id="app">
+        <section class="main-order">
+            <div class="left-side">
+                <h2 class="recap-order">Mon panier</h2>
+                <div class="produits" id="productCart"></div>
+                <div class="total__cost">
+                    <p class="total__cost-title" id="totalCost"></p>
+                </div>
+                <div class="clear__cart">
+                    <button class="cart__button-clear" id="clear">Vider mon panier</button>
+                </div>
+            </div>
+            <div class="rigth-side">
+                <div class="order">
+                    <h2 class="order__title">Vos informations</h2>
+                    <form method="POST" class="order__form" id="orderForm">
+                        <div class="form-control">
+                            <label for="inputFirstName" class="firstname-label">Prénom</label>
+                            <input id="inputFirstName" name="firstName" type="text" class="firstname-input" placeholder="Prénom" required/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="inputLastName" class="lastname-label">Nom</label>
+                            <input id="inputLastName" name="lastName" type="text" class="lastname-input" placeholder="Nom" required/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="address" class="address-label">Adresse</label>
+                            <input id="address" name="inputAddress" type="text" class="address-input" placeholder="10, rue du Paradis" required/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="city" class="city-label">Ville</label>
+                            <input id="city" name="inputCity" type="text" class="city-input" placeholder="Paris" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="inputEmail" class="email-label">Email</label>
+                            <input id="inputEmail" name="inputEmail" type="email" class="email-input" placeholder="xxx@yyy.zzz" required/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="submission">
+                            <button type="submit" class="cart__button">Commander</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- <div class="container">
+        <div class="cart">
+            <div class="products">
+                <div class="product">
+                    <img src=${item.Image}>
+                    <div class="product-info">
+                        <h3 class="product-name">${item.Nomproduit}</h3>
+                        <h4 class="product-lense">${item.lenses}</h4>
+                        <h4 class="product-price">${item.Prix} €</h4>
+                        <p class="product-quantity">Quantité : ${item.quantite}
+                        <button class="product-remove">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <span class="remove">Remove</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+      </div> -->
+    <footer>
+        <ul>
+            <li><a href="#"><img src="../image/logo/logo_mini.png" alt="logo orinoco"></a></li>
+            <li><a href="#">&copy; Aides & Mentions</a></li>
+            <li><a href="#">OpenClassrooms</a></li>
+        </ul>
+    </footer>
+    <script src="../js/cart.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@import "../utils/variables" ;
+.order__container {
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #f1f1f1;
+  width: 40%;
+  margin-bottom: 9.5%;
+  margin-top: 6rem;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 22%;
+    margin-top: 50px;
+  }
+}
+
+.merci {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: $font-text;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.prix-total {
+  text-align: center;
+  margin-top: 30px;
+}

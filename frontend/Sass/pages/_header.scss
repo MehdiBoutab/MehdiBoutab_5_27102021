@@ -1,0 +1,86 @@
+@import "../utils/break-points";
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.856);
+  border-top: 0.2rem solid white;
+  width: 100%;
+  z-index: 999999;
+  .logo {
+    a {
+      padding: 1rem;
+      img {
+        width: 9rem;
+      }
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      li {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        a {
+          color: rgb(255, 255, 255);
+          .fa-shopping-basket,
+          .fa-camera,
+          .fa-home {
+            font-size: 1.2rem;
+            margin-right: 0.4rem;
+            font-weight: bold;
+            .count {
+              padding: 3px;
+              background-color: white;
+              color: black;
+              border-radius: 50%;
+              text-align: center;
+              align-items: center;
+              margin: auto;
+              margin-left: 2px;
+              margin-bottom: 0px;
+              position: relative;
+              bottom: 8px;
+              font-size: 18px;
+              &:hover {
+                background-color: #fbb72c;
+                color: white;
+              }
+            }
+          }
+          &:hover {
+            color: #fbb72c;
+          }
+          @include phone {
+            span{
+              display: none;
+            }
+            .fa-shopping-basket,
+            .fa-camera,
+            .fa-home {
+              font-size: 1.8rem;
+              font-weight: bold;
+              margin-right: 0;
+            }
+            
+          }
+          @include mini-phone {
+            span{
+              display: none;
+            }
+            .fa-shopping-basket,
+            .fa-camera,
+            .fa-home {
+              font-size: 1.3rem;
+              font-weight: bold;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

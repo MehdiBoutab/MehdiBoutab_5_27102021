@@ -1,0 +1,20 @@
+main {
+  .hero {
+    &__image {
+      background-image: url(../image/camera.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0rem 0rem 2rem 2rem;
+      height: 30vh;
+      width: auto;
+    }
+    &__title {
+      text-align: center;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      padding: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}

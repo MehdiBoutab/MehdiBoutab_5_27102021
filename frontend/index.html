@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Orinoco, site de vente en ligne par thématiques, vous présente Oribear et ses ours en peluche faits à la main">
+    <!-- Link Favicone -->
+    <link rel="icon" type="image/png" href="image/logo/favicone.png" />
+    <!-- Link librairie FontAwesome -->
+    <script src="https://kit.fontawesome.com/9978fbdf61.js" crossorigin="anonymous"></script>
+    <!-- Link librairie GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Poppins:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- Link feuille de style CSS -->
+    <link rel="stylesheet" href="/frontend/css/main.css">
+    <title>Accueil - Orinoco</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="image/logo/logo_mini.png" alt="logo orinoco"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i><span class=".cacher">Home</span></a></li>
+                <li><a href="#products"><i class="fas fa-camera"></i><span class=".cacher">Nos produits</span></a></li>
+                <li><a href="./pages/panier.html"><i class="fas fa-shopping-basket"><span class="count">0</span></i><span class=".cacher">Panier</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero__image"></div>
+            <div class="hero__title">
+                <h1>Nos Appareils photo</h1>
+            </div>
+        </div>
+    </main>
+
+    <section id="products">
+        <!-- <article class="product-card">
+            <a href="../../frontend/pages/produit.html?id=${product._id}">
+                <div class="product-tumb">
+                    <img src="${product.imageUrl}" alt="Photo d\'un appareil ${product.name}">
+                </div>
+                <div class="product-details">
+                    <h4>${product.name}</h4>
+                    <p>${product.description}</p>
+                    <div class="product-bottom-details">
+                        <p class="product-price">${product.price / 100}€</p>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                        </div>
+                        <div class="detail">
+                            <label>objectif: </label>
+                            <select>${htmlOptions}</select>
+                         </div>
+                    </div>
+                </div>
+            </a>
+        </article> `; -->
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#"><img src="image/logo/logo_mini.png" alt="logo orinoco"></a></li>
+            <li><a href="#">&copy; Aides & Mentions</a></li>
+            <li><a href="#">OpenClassrooms</a></li>
+        </ul>
+    </footer>
+    <script src="js/index.js" defer></script>
+</body>
+
+</html>
