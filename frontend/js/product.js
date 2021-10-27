@@ -2,9 +2,8 @@ const getId = new URLSearchParams(location.search).get("id");
 const productSingle = document.querySelector("#productSingle");
 
 class Product {
-  /**
-   * @param
-   */
+
+  /* Call API products */
   async getproducts() {
     try {
       return fetch("http://localhost:3000/api/cameras/" + getId).then(
@@ -14,10 +13,7 @@ class Product {
       alert("la connexion au serveur n'a pas pu être effectué");
     }
   }
-  /**
-   *
-   * @param {*} product
-   */
+  /* Create Single Product */
   CreateSingleCard(product) {
     let result = "";
     let htmlOptions = ""; // Boucle permettant d'afficher toutes les options de vernis
@@ -53,6 +49,7 @@ class Product {
         </article> `;
     productSingle.innerHTML = result;
   }
+  /* Save product in localStorage */
   async SaveProducts(product) {
     let productInCart = [];
     let productInlocalStorage = JSON.parse(localStorage.getItem("products"));
@@ -72,7 +69,7 @@ class Product {
     }
     localStorage.setItem("products", JSON.stringify(productInCart));
   }
-
+  /* Adding product to the Cart */
   async AddToCart() {
     let result = "";
     const product = await this.getproducts();
@@ -105,7 +102,7 @@ class Product {
       setTimeout("location.reload(true);", 2000);
     });
   }
-
+  /* display the number of selected products in the navbar */
   CartNumberDisplay() {
     let CartNumbers = 0;
     let cartItem = JSON.parse(localStorage.getItem("products"));

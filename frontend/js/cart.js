@@ -1,15 +1,8 @@
-/**
- * @param  {}
- * @param  {}
- * @param  {}
- * @param  {}
- * @param  {}
- * @param
- */
 const cart = document.querySelector("#productCart");
 const price = document.getElementsByClassName("cart-total");
 
 class Panier {
+  /* display All Product saved in localStorage */
   displayCartItem() {
     let result = "";
     let cartItem = JSON.parse(localStorage.getItem("products"));
@@ -34,13 +27,15 @@ class Panier {
       cart.innerHTML = result;
     });
   }
+  /* Show the ID */
   show(id) {
     document.getElementById(id).style.display = "block";
   }
-
+  /* hide the ID */
   hide(id) {
     document.getElementById(id).style.display = "none";
   }
+  /*  Check if the Local Storage is empty */
   isCartEmpty() {
     return (
       !localStorage.getItem("products") ||
@@ -57,6 +52,7 @@ class Panier {
       this.displayCartItem();
     }
   }
+  /* display the number of selected products in the navbar */
   CartNumberDisplay() {
     let CartNumbers = 0;
     let cartItem = JSON.parse(localStorage.getItem("products"));
@@ -76,7 +72,7 @@ class Panier {
       location.reload(); // On recharge la page
     });
   }
-
+  /* display total price of all product in localStorage */
   SubTotal() {
     let subtotal = 0;
     let cartItem = JSON.parse(localStorage.getItem("products"));
@@ -92,6 +88,7 @@ class Panier {
     }
     document.getElementById("totalCost").innerHTML = "Prix total = " + subtotal;
   }
+
   checkInputs() {
     let firstName = document.getElementById("inputFirstName");
     let lastName = document.getElementById("inputLastName");
@@ -179,7 +176,7 @@ class Panier {
 
   // On ajoute un message d'erreur si le formulaire est invalidé, on modifie le design du DOM
   setErrorFor(input, message) {
-    const formControl = input.parentElement; // On désigne que .form-control est le parent de l'input
+    const formControl = input.parentElement;
     const small = formControl.querySelector("small");
     small.innerText = message;
     formControl.className = "form-control error";
@@ -196,7 +193,7 @@ class Panier {
       e.preventDefault();
       this.checkInputs(); // On vérifie la conformité des informations
 
-      if (!this.isFormValid()) {
+      if (!this.isFormValid()){
         alert("Merci de bien remplir le formulaire");
         return;
       }
@@ -214,7 +211,7 @@ class Panier {
       };
 
       let objetRequest = JSON.stringify(aenvoyer);
-
+      // APEL API AVEC FETCH // ENVOIE DES DONNEES AVEC POST 
       fetch("http://localhost:3000/api/cameras/order", {
         headers: {
           "Content-Type": "application/json",

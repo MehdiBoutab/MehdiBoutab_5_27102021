@@ -11,6 +11,7 @@ class Products {
     }
   }
 
+  /* Creation of cards for all products */
   displayproducts(products) {
     let result = "";
     products.forEach((product) => {
@@ -37,6 +38,8 @@ class Products {
     });
     productDOM.innerHTML = result;
   }
+
+  /* display the number of selected products in the navbar */
   CartNumberDisplay() {
     let CartNumbers = 0;
     let cartItem = JSON.parse(localStorage.getItem("products"));
