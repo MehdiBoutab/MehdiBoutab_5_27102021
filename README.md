@@ -9,9 +9,6 @@ Il ne s'agit là que d'un MVP, aucune réelle gestion des transaction n'est effe
 
 Aucune maquette n'est donnée. Il est demandé d'improviser l'interface utilisateur.
 
-## Cahier des charges.
-Pour en savoir plus, veuillez consulter le ***document complet*** disponible [ici]()
-
 ### TODO
 
 - [x] Vérifier que les inputs sont corrects avant l'envoi au back-end
@@ -36,10 +33,6 @@ Pour en savoir plus, veuillez consulter le ***document complet*** disponible [ic
 - [x] Les inputs du formulaire d'achat devront être validés avant l'envoi à l'API.
 
 ## Tester l'application web
-
-### Tester le site en ligne
-
-Pour tester simplement l'application web, rendez-vous [ici]()
 
 #### Lancement de l'application
 
